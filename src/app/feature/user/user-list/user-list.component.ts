@@ -13,10 +13,10 @@ export class UserListComponent implements OnInit {
 
   title = 'User List';
 
-  selectedSortKey = 'id';
+  selectedSortKey = 'Id';
   sortDesc = 'asc';
-  sortKeys: string[] = ['id', 'userName', 'firstName', 'lastName'];
-  selectSortKey: string[] = ['id', 'userName', 'firstName', 'lastName'];
+  sortKeys: string[] = ['Id', 'UserName', 'FirstName', 'LastName'];
+  selectSortKey: string[] = ['Id', 'UserName', 'FirstName', 'LastName'];
   users: User[];
 
 

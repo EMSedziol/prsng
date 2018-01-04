@@ -11,7 +11,7 @@ export class SortPipe implements PipeTransform {
   ): any[] {
     console.log('orderBy:', orderBy, 'order:', desc);
 
-    let sortedObjArr = objArr.sort(function(a, b) {
+    const sortedObjArr = objArr.sort(function(a, b) {
       if (a[orderBy] === b[orderBy]) {
         return 0;
       } // equal
