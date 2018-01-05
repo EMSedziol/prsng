@@ -9,7 +9,9 @@ import { Menu } from './menu';
 export class MenuComponent {
 
   menuItems: Menu[] = [
-    new Menu('UserList', '/user/List', 'List of Users')
+    new Menu('User', '/user/list', 'List of Users'),
+    new Menu('Vendor', '/vendor/list', 'List of Vendors'),
+    new Menu('Product', '/product/list', 'List of Products')
   ];
   constructor() { }
 

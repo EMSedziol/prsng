@@ -11,8 +11,8 @@ export class UserService {
 
   users: User[];
 
-  validate(user: User): Observable<User[]> {
-    return this.http.post(url + 'Validate', user) as Observable<User[]>;
+  validate(userName: string, password: string): Observable<User[]> {
+    return this.http.get(url + 'Validate?userName=' + userName + '&password=' + password) as Observable<User[]>;
   }
 
   list(): Observable<User[]> {

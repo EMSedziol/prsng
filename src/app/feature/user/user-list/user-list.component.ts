@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { User } from '../../../model/user';
 import { UserService } from '../../../service/user.service';
+import { SystemService } from '../../../service/system.service';
+import { LogService } from '../../../service/log.service';
 import { SortPipe } from '../../../util/sort-pipe';
 
 @Component({
@@ -20,7 +22,9 @@ export class UserListComponent implements OnInit {
   users: User[];
 
 
-  constructor(private UserSvc: UserService) { }
+  constructor(private UserSvc: UserService,
+              private SysSvc: SystemService,
+              private LogSvc: LogService) { }
 
   ngOnInit() {
     this.UserSvc.list()
