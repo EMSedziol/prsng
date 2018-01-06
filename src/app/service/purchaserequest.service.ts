@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { PurchaseRequest } from '../model/purchaserequest';
 
-const url = 'http://localhost:8080/Vendor/';
+const url = 'http://localhost:8080/PR/';
 
 @Injectable()
 export class PurchaseRequestService {

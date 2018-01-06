@@ -19,8 +19,20 @@ import { VendorDetailComponent } from './feature/vendor/vendor-detail/vendor-det
 import { VendorEditComponent } from './feature/vendor/vendor-edit/vendor-edit.component';
 import { VendorCreateComponent } from './feature/vendor/vendor-create/vendor-create.component';
 
+import { PRListComponent } from './feature/purchaserequest/pr-list/pr-list.component';
+import { PRDetailComponent } from './feature/purchaserequest/pr-detail/pr-detail.component';
+import { PREditComponent } from './feature/purchaserequest/pr-edit/pr-edit.component';
+import { PRCreateComponent } from './feature/purchaserequest/pr-create/pr-create.component';
+
+import { PRLIListComponent } from './feature/purchaserequestlineitem/prli-list/prli-list.component';
+
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'pr/detail/:id', component: PRDetailComponent },
+    { path: 'pr/edit/:id', component: PREditComponent },
+    { path: 'pr/create', component: PRCreateComponent },
+    { path: 'pr/list', component: PRListComponent },
+    { path: 'prli/list', component: PRLIListComponent },
     { path: 'user/login', component: UserLoginComponent },
     { path: 'user/detail/:id', component: UserDetailComponent },
     { path: 'user/edit/:id', component: UserEditComponent },

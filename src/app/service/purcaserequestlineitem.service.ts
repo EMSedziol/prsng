@@ -4,12 +4,12 @@ import { Observable } from 'rxjs/Observable';
 
 import { PurchaseRequestLineItem } from '../model/purchaserequestlineitem';
 
-const url = 'http://localhost:8080/Vendor/';
+const url = 'http://localhost:8080/PRLI/';
 
 @Injectable()
 export class PurchaseRequestLineItemService {
 
-  purchaserequests: PurchaseRequestLineItem[];
+  purchaserequestlineitems: PurchaseRequestLineItem[];
 
   list(): Observable<PurchaseRequestLineItem[]> {
     return this.http.get(url + 'List') as Observable<PurchaseRequestLineItem[]>;

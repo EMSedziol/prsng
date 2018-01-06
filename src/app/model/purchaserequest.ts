@@ -1,6 +1,6 @@
 export class PurchaseRequest {
   Id: string;
-  User: string;
+  UserId: string;
   Description: string;
   Justification: string;
   DateNeeded: string;
@@ -12,7 +12,7 @@ export class PurchaseRequest {
   Active: boolean;
 
   constructor (id: string,
-              user: string,
+              userid: string,
               description: string,
               justification: string,
               dateneeded: string,
@@ -23,7 +23,7 @@ export class PurchaseRequest {
               reasonforrejection: string,
               active: boolean) {
                 this.Id = id;
-                this.User = user;
+                this.UserId = userid;
                 this.Description = description;
                 this.Justification = justification;
                 this.DateNeeded = dateneeded;

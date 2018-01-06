@@ -14,12 +14,15 @@ import { UserService } from './service/user.service';
 import { ProductService } from './service/product.service';
 import { VendorService } from './service/vendor.service';
 import { LogService } from './service/log.service';
+import { SystemService } from './service/system.service';
+import { PurchaseRequestService } from './service/purchaserequest.service';
 
 import { SortPipe } from './util/sort-pipe';
 import { UserListComponent } from './feature/user/user-list/user-list.component';
 import { UserDetailComponent } from './feature/user/user-detail/user-detail.component';
 import { UserCreateComponent } from './feature/user/user-create/user-create.component';
 import { UserEditComponent } from './feature/user/user-edit/user-edit.component';
+import { UserLoginComponent } from './feature//user/user-login/user-login.component';
 
 import { ProductCreateComponent } from './feature/product/product-create/product-create.component';
 import { ProductDetailComponent } from './feature/product/product-detail/product-detail.component';
@@ -30,16 +33,18 @@ import { VendorCreateComponent } from './feature/vendor/vendor-create/vendor-cre
 import { VendorDetailComponent } from './feature/vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './feature/vendor/vendor-edit/vendor-edit.component';
 import { VendorListComponent } from './feature/vendor/vendor-list/vendor-list.component';
-import { UserLoginComponent } from './feature//user/user-login/user-login.component';
-import { SystemService } from './service/system.service';
-import { PrCreateComponent } from './feature/purchaserequest/pr-create/pr-create.component';
-import { PrDetailComponent } from './feature/purchaserequest/pr-detail/pr-detail.component';
-import { PrEditComponent } from './feature/purchaserequest/pr-edit/pr-edit.component';
-import { PrListComponent } from './feature/purchaserequest/pr-list/pr-list.component';
+
+
+import { PRCreateComponent } from './feature/purchaserequest/pr-create/pr-create.component';
+import { PRDetailComponent } from './feature/purchaserequest/pr-detail/pr-detail.component';
+import { PREditComponent } from './feature/purchaserequest/pr-edit/pr-edit.component';
+import { PRListComponent } from './feature/purchaserequest/pr-list/pr-list.component';
+
 import { PrliCreateComponent } from './feature/purchaserequestlineitem/prli-create/prli-create.component';
 import { PrliDetailComponent } from './feature/purchaserequestlineitem/prli-detail/prli-detail.component';
 import { PrliEditComponent } from './feature/purchaserequestlineitem/prli-edit/prli-edit.component';
-import { PrliListComponent } from './feature/purchaserequestlineitem/prli-list/prli-list.component';
+
+import { PRLIListComponent } from './feature/purchaserequestlineitem/prli-list/prli-list.component';
 
 @NgModule({
   declarations: [
@@ -61,14 +66,11 @@ import { PrliListComponent } from './feature/purchaserequestlineitem/prli-list/p
     VendorEditComponent,
     VendorListComponent,
     UserLoginComponent,
-    PrCreateComponent,
-    PrDetailComponent,
-    PrEditComponent,
-    PrListComponent,
-    PrliCreateComponent,
-    PrliDetailComponent,
-    PrliEditComponent,
-    PrliListComponent
+    PRCreateComponent,
+    PRDetailComponent,
+    PREditComponent,
+    PRListComponent,
+    PRLIListComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,8 @@ import { PrliListComponent } from './feature/purchaserequestlineitem/prli-list/p
     ProductService,
     VendorService,
     SystemService,
-    LogService
+    LogService,
+    PurchaseRequestService
   ],
   bootstrap: [AppComponent]
 })
