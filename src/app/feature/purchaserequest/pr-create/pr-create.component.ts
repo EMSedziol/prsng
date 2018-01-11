@@ -21,7 +21,7 @@ export class PRCreateComponent implements OnInit {
       .subscribe(resp => {
         this.resp = resp;
         console.log('Vendor added ', this.resp);
-        this.router.navigate(['/pr/list']);
+        this.router.navigate(['/prli/create']);
       });
   }
 

@@ -7,7 +7,6 @@
 <div class='component-content'>
   <div>
     <span class='component-title'>{{title}}</span>
-    |
     <span>
       <a routerLink='/pr/list'>Back to list</a>
     </span>
@@ -16,33 +15,33 @@
   <div *ngIf='purchaserequest'>
     <div class='form-group row'>
       <label class='col-form-label col-sm-2' for='purchaserequestuserid'>User Id</label>
-      <input [(ngModel)]='purchaserequest.UserId' name='UserId' type='text' class='form-control col-sm-6' id='purchaserequestuserid' aria-describedby="userideHelp"
-        placeholder="UserId">
+      <input [(ngModel)]='purchaserequest.UserId' name='UserId' type='text' class='form-control col-sm-6' id='purchaserequestuserid'
+        aria-describedby="userideHelp" placeholder="UserId">
       <small id="codeHelp" class="form-text text-muted col-sm-2">User Id</small>
     </div>
     <div class='form-group row'>
       <label class='col-form-label col-sm-2' for='purchaserequestdescription'>Name</label>
-      <input [(ngModel)]='purchaserequest.Description' name='Description' type='text' class='form-control col-sm-6' id='purchaserequestdescription' aria-describedby="descriptioneHelp"
-        placeholder="Description">
+      <input [(ngModel)]='purchaserequest.Description' name='Description' type='text' class='form-control col-sm-6' id='purchaserequestdescription'
+        aria-describedby="descriptioneHelp" placeholder="Description">
       <small id="DescriptioneHelp" class="form-text text-muted col-sm-2">Description</small>
     </div>
     <div class='form-group row'>
       <label class='col-form-label col-sm-2' for='purchaserequestjustification'>Justification</label>
 
-      <input [(ngModel)]='purchaserequest.Justification' name='justification' type='text' class='form-control col-sm-6' id='justification' aria-describedby="justificationeHelp"
-        placeholder="justification">
+      <input [(ngModel)]='purchaserequest.Justification' name='justification' type='text' class='form-control col-sm-6' id='justification'
+        aria-describedby="justificationeHelp" placeholder="justification">
       <small id="justificationHelp" class="form-text text-muted col-sm-2">Justification</small>
     </div>
     <div class='form-group row'>
       <label class='col-form-label col-sm-2' for='purchaserequestdateneeded'>Date Needed</label>
-      <input [(ngModel)]='purchaserequest.DateNeeded' name='DateNeeded' type='text' class='form-control col-sm-6' id='dateneeded' aria-describedby="dateneededeHelp"
-        placeholder="Date Needed">
+      <input [(ngModel)]='purchaserequest.DateNeeded' name='DateNeeded' type='text' class='form-control col-sm-6' id='dateneeded'
+        aria-describedby="dateneededeHelp" placeholder="Date Needed">
       <small id="dateneededeHelp" class="form-text text-muted col-sm-2">Date Needed</small>
     </div>
     <div class='form-group row'>
       <label class='col-form-label col-sm-2' for='purchaserequestdeliverymode'>Delivery Mode</label>
-      <input [(ngModel)]='purchaserequest.DeliveryMode' name='Deliverymode' type='text' class='form-control col-sm-6' id='deliverymode' aria-describedby="deliverymodeeHelp"
-        placeholder="deliverymode">
+      <input [(ngModel)]='purchaserequest.DeliveryMode' name='Deliverymode' type='text' class='form-control col-sm-6' id='deliverymode'
+        aria-describedby="deliverymodeeHelp" placeholder="deliverymode">
       <small id="deliverymodeeHelp" class="form-text text-muted col-sm-2">Delivery Mode</small>
     </div>
     <div class='form-group row'>
@@ -51,29 +50,11 @@
         placeholder="Status Id">
       <small id="zipeHelp" class="form-text text-muted col-sm-2">Status Id</small>
     </div>
-    <div class='form-group row'>
-      <label class='col-form-label col-sm-2' for='purchaserequesttotal'>Total</label>
-      <input [(ngModel)]='purchaserequest.Total' name='Total' type='text' class='form-control col-sm-6' id='total' aria-describedby="totaleHelp"
-        placeholder="Total">
-      <small id="TotaleHelp" class="form-text text-muted col-sm-2">Total</small>
-    </div>
-    <div class='form-group row'>
-      <label class='col-form-label col-sm-2' for='purchaserequestreasonforrejection'>Reason For Rejection</label>
-      <input [(ngModel)]='purchaserequest.ReasonForRejection' name='ResonForeRejection' type='text' class='form-control col-sm-6' id='resonForRejection' aria-describedby="resonforrejectioneHelp"
-        placeholder="ReasonForRejection">
-      <small id="reasonforrejectioneHelp" class="form-text text-muted col-sm-2">Reason For Rejection</small>
-    </div>
-    <div class='form-group row'>
-      <label class='col-form-label col-sm-2' for='useractive'>Active:</label>
-      <input [(ngModel)]='purchaserequest.Active' name='Active' type='checkbox' class='form-control col-sm-6' id='vendoractive' aria-describedby="activeHelp"
-        placeholder="Active">
-      <small id="activeHelp" class="form-text text-muted col-sm-2">Active</small>
-    </div>
+
 
     <div class='form-group'>
       <button (click)='create()' class='btn btn-primary'>Create</button>
     </div>
 
   </div>
-  <p>didnt' get into form</p>
 </div>

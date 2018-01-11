@@ -47,7 +47,7 @@
       <td>{{ pr.Justification }}</td>
       <td>{{ pr.DateNeeded | date:'yyyy-mm-dd' }}</td>
       <td>{{ pr.DeliveryMode }}</td>
-      <td>{{ pr.StatusId }}</td>
+      <td>{{ pr.StatusName }}</td>
       <td>{{ pr.Total }}</td>
       <td>{{ pr.SubmittedDate | date:'yyyy-mm-dd' }}</td>
       <td>{{ pr.ReasonForRejection }}</td>
@@ -61,6 +61,9 @@
         </a>
         <a routerLink='/pr/edit/{{ pr.Id }}'>
           <img src='assets/edit.png' title='Edit'>
+        </a>
+        <a routerLink='/pr/lines/{{ pr.Id }} '>
+          <img src='assets/lines.png' title='Line'>
         </a>
       </td>
     </tr>

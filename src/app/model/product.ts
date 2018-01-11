@@ -3,7 +3,7 @@ export class Product {
   VendorId: string;
   PartNumber: string;
   Name: string;
-  Price: string;
+  Price: number;
   Unit: string;
   Photopath: string;
   Active: boolean;
@@ -12,10 +12,10 @@ export class Product {
               vendorid: string,
               partNumber: string,
               name: string,
-              price: string,
+              price: number,
               unit: string,
               photopath: string,
-              active: string) {
+              active: boolean) {
                   this.Id = id;
                   this.VendorId = vendorid;
                   this.PartNumber = partNumber;
@@ -23,5 +23,6 @@ export class Product {
                   this.Price = price;
                   this.Unit = unit;
                   this.Photopath = photopath;
+                  this.Active = active;
               }
 }

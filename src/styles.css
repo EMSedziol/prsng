@@ -12,3 +12,14 @@
   width: 49%;
   text-align: right;
 }
+
+
+.component-title {
+  padding-left: 50px;
+  background-color: yellow;
+}
+
+.a {
+  background-color: yellow;
+}
+

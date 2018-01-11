@@ -39,7 +39,7 @@
       <td>Reviewer</td>
       <td>Action</td>
     </tr>
-    <tr *ngFor="let user of users | sort:selectedSortKey:sortDesc">
+    <tr *ngFor="let user of users | sort:selectedSortKey:sortDesc"  ng-class-odd="'striped'">
       <td>{{ user.Id}}</td>
       <td>{{ user.UserName }}</td>
       <td>**********</td>

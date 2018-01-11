@@ -21,7 +21,7 @@
     <tr><th>Status Id</th><td>{{ purchaserequest.StatusId }}</td></tr>
     <tr><th>Total</th><td>{{ purchaserequest.Total }}</td></tr>
     <tr><th>Reason for Rejection</th><td>{{ purchaserequest.ReasonForRejection }}</td></tr>
-		<tr><th>Active</th><td>{{vendor.Active ? 'Yes':'No'}}</td></tr>
+		<tr><th>Active</th><td>{{purchaserequest.Active ? 'Yes':'No'}}</td></tr>
 		<tr><td colspan="2">
 			<a routerLink='/pr/edit/{{purchaserequest.Id}}' class='btn btn-primary' title='Edit'>Edit</a>
 <!--			<button (click)="remove()" class='btn btn-danger' title='Delete'>Delete</button>  -->

@@ -7,6 +7,7 @@ nav {
 ul {
     padding: 10;
     margin: 10;
+    height: 30px;
 }
 
 li {
@@ -24,7 +25,7 @@ a {
 a:hover{
     background-color: lightskyblue;
     color: black;
-    font-weight: 1200;
+    font-weight: 1600px;
     font-family: Courier New, Courier, monospace;
 
 }

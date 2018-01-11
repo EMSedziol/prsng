@@ -16,6 +16,7 @@ export class PurchaseRequestService {
   }
 
   get(id): Observable<PurchaseRequest[]> {
+   //  console.log('Get?id=' + id);
     return this.http.get(url + 'Get?id=' + id) as Observable<PurchaseRequest[]>;
   }
 

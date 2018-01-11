@@ -28,7 +28,7 @@
   </div>
 </div>
 <div>
-  <table class="table table-sm" *ngIf='prlis'>
+  <table class="table table-sm" *ngIf='purchasereqesutlineitems'>
     <tr>
       <td>Id</td>
       <td>PR Id</td>
@@ -36,10 +36,10 @@
       <td>Quantity</td>
       <td>Active</td>
     </tr>
-    <tr *ngFor="let prli of prlis | sort:selectSortKey:sortDesc">
-      <td>{{ prli.Id}}</td>
+    <tr *ngFor='let prli of purchasereqesutlineitems | sort:selectSortKey:sortDesc'>
+      <td>{{ prli.Id }}</td>
       <td>{{ prli.PurchaseRequestId }}</td>
-      <td>{{ prli.ProductId }}</td>
+      <td>{{ prli.ProductName }}</td>
       <td>{{ prli.Quantity }}</td>
       <td>
         {{ prli.Active ? 'Yes' : 'No' }}

@@ -9,7 +9,12 @@ const url = 'http://localhost:8080/PRLI/';
 @Injectable()
 export class PurchaseRequestLineItemService {
 
-  purchaserequestlineitems: PurchaseRequestLineItem[];
+  purchaserequestslineitems: PurchaseRequestLineItem[];
+
+  PRLIByPRId(id): Observable<PurchaseRequestLineItem[]> {
+    console.log( url + 'LinesForPR?id=' + id);
+    return this.http.get(url + 'LinesForPR?id='+id) as Observable<PurchaseRequestLineItem[]>;
+  }
 
   list(): Observable<PurchaseRequestLineItem[]> {
     return this.http.get(url + 'List') as Observable<PurchaseRequestLineItem[]>;

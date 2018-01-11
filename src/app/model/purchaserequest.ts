@@ -6,6 +6,7 @@ export class PurchaseRequest {
   DateNeeded: string;
   DeliveryMode: string;
   StatusId: string;
+  StatusName: string;
   Total: number;
   SubmittedDate: string;
   ReasonForRejection: string;
@@ -23,7 +24,6 @@ export class PurchaseRequest {
               reasonforrejection: string,
               active: boolean) {
                 this.Id = id;
-                this.UserId = userid;
                 this.Description = description;
                 this.Justification = justification;
                 this.DateNeeded = dateneeded;

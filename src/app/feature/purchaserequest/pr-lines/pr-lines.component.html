@@ -1,0 +1,59 @@
+<p>
+  pr-lines works!
+</p>
+<app-menu></app-menu>
+<div>
+  <div class='component-content'>
+    <span class='component-title'><h2>{{title}}</h2></span>
+    <span><a routerLink='/pr/create'><img id='createnew' width='20' height='20' src='assets/add-new.png' title='Add New'></a></span>
+    <span><a routerLink='pr/list'>Back to List'</a></span>
+  </div>
+  <p *ngIf='undefined'>Loading</p>
+  <div *ngIf='pr'>
+    <table class='table table-sm'>
+      <tr>
+      <th>Id</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Total:</th>
+    </tr>
+    <tr>
+      <td>{{ pr.Id }}</td>
+      <td>{{ pr.Description }}</td>
+      <td>{{ pr.StatusName }}</td>
+      <td *ngIf='prli'>{{ prtotal }}</td>
+    </tr>
+    </table>
+    <p></p>
+    <table class="table table-sm">
+      <tr>
+        <span class='component-title'>Lines</span>
+        <a routerLink='/prli/create{{ pr.Id }}'>
+          <img src='assets/add-new.png' width='20' height='20'>
+        </a>
+      </tr>
+      <tr>
+        <th>Id</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Line Total</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor='let prline of prli' ng-class-odd="'striped'">
+        <td>{{ prline.Id }}</td>
+        <td *ngIf='prline.ProductName'>{{ prline.ProductName }}</td>
+        <td>{{ prline.Quantity }}</td>
+        <td *ngIf='prline'>{{ prline.ProductPrice }}</td>
+        <td *ngIf='prline'>{{ prline.ProductPrice * prline.Quantity | currency }} {{ prline.Quantity }}</td>
+        <td>
+          <a routerLink='/prli/detail/{{ prline.Id }}/{{ pr.Id }}'>
+            <img width='20' height='20' src='assets/detail.png'></a>
+          <a routerLink='prli/edit/{{ prline.Id }}/{{ pr.Id }}'>
+            <img width='20' height='20' src='assets/edit.png'></a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+

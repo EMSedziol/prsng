@@ -16,6 +16,8 @@ import { VendorService } from './service/vendor.service';
 import { LogService } from './service/log.service';
 import { SystemService } from './service/system.service';
 import { PurchaseRequestService } from './service/purchaserequest.service';
+import { PurchaseRequestLineItemService } from './service/purchaserequestlineitem.service';
+import { StatusService } from './service/status.service';
 
 import { SortPipe } from './util/sort-pipe';
 import { UserListComponent } from './feature/user/user-list/user-list.component';
@@ -39,12 +41,14 @@ import { PRCreateComponent } from './feature/purchaserequest/pr-create/pr-create
 import { PRDetailComponent } from './feature/purchaserequest/pr-detail/pr-detail.component';
 import { PREditComponent } from './feature/purchaserequest/pr-edit/pr-edit.component';
 import { PRListComponent } from './feature/purchaserequest/pr-list/pr-list.component';
+import { PrLinesComponent } from './feature/purchaserequest/pr-lines/pr-lines.component';
 
 import { PrliCreateComponent } from './feature/purchaserequestlineitem/prli-create/prli-create.component';
 import { PrliDetailComponent } from './feature/purchaserequestlineitem/prli-detail/prli-detail.component';
 import { PrliEditComponent } from './feature/purchaserequestlineitem/prli-edit/prli-edit.component';
-
 import { PRLIListComponent } from './feature/purchaserequestlineitem/prli-list/prli-list.component';
+import { ListPrComponent } from './feature/purchaserequestlineitem/list-pr/list-pr.component';
+
 
 @NgModule({
   declarations: [
@@ -70,7 +74,11 @@ import { PRLIListComponent } from './feature/purchaserequestlineitem/prli-list/p
     PRDetailComponent,
     PREditComponent,
     PRListComponent,
-    PRLIListComponent
+    PRLIListComponent,
+    PrliDetailComponent,
+    PrliCreateComponent,
+    PrliEditComponent,
+    PrLinesComponent
   ],
   imports: [
     BrowserModule,
@@ -79,12 +87,14 @@ import { PRLIListComponent } from './feature/purchaserequestlineitem/prli-list/p
     AppRoutingModule
   ],
   providers: [
-    UserService,
-    ProductService,
-    VendorService,
-    SystemService,
     LogService,
-    PurchaseRequestService
+    ProductService,
+    PurchaseRequestService,
+    PurchaseRequestLineItemService,
+    StatusService,
+    SystemService,
+    UserService,
+    VendorService
   ],
   bootstrap: [AppComponent]
 })

@@ -23,16 +23,24 @@ import { PRListComponent } from './feature/purchaserequest/pr-list/pr-list.compo
 import { PRDetailComponent } from './feature/purchaserequest/pr-detail/pr-detail.component';
 import { PREditComponent } from './feature/purchaserequest/pr-edit/pr-edit.component';
 import { PRCreateComponent } from './feature/purchaserequest/pr-create/pr-create.component';
+import { PrLinesComponent } from './feature/purchaserequest/pr-lines/pr-lines.component';
 
 import { PRLIListComponent } from './feature/purchaserequestlineitem/prli-list/prli-list.component';
+import { PrliEditComponent } from './feature/purchaserequestlineitem/prli-edit/prli-edit.component';
+import { PrliDetailComponent } from './feature/purchaserequestlineitem/prli-detail/prli-detail.component';
+import { PrliCreateComponent } from './feature/purchaserequestlineitem/prli-create/prli-create.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'pr/detail/:id', component: PRDetailComponent },
     { path: 'pr/edit/:id', component: PREditComponent },
     { path: 'pr/create', component: PRCreateComponent },
+    { path: 'pr/lines/:id', component: PrLinesComponent },
     { path: 'pr/list', component: PRListComponent },
     { path: 'prli/list', component: PRLIListComponent },
+    { path: 'prli/detail/:id/:prid', component: PrliDetailComponent },
+    { path: 'prli/create', component: PrliCreateComponent },
+    { path: 'prli/edit/:id/:prid', component: PrliEditComponent },
     { path: 'user/login', component: UserLoginComponent },
     { path: 'user/detail/:id', component: UserDetailComponent },
     { path: 'user/edit/:id', component: UserEditComponent },
