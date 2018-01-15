@@ -3,8 +3,9 @@ import { PurchaseRequest } from '../../../model/purchaserequest';
 import { PurchaseRequestService } from '../../../service/purchaserequest.service';
 import { Status } from '../../../model/status';
 import { StatusService } from '../../../service/status.service';
-
+import { User } from '../../../model/user';
 import { SortPipe } from '../../../util/sort-pipe';
+import { UserService } from '../../../service/user.service';
 
 @Component({
   selector: 'app-pr-list',
@@ -22,31 +23,28 @@ export class PRListComponent implements OnInit {
 
   purchaserequests: PurchaseRequest[];
   statuss: Status[];
+  user: User;
 
   constructor(private PurchaseRequestSvc: PurchaseRequestService,
-              private StatusSvc: StatusService) { }
+              private StatusSvc: StatusService,
+              private UserSvc: UserService) { }
 
   ngOnInit() {
 
       this.PurchaseRequestSvc.list()
         .subscribe(purchaserequests => {
           this.purchaserequests = purchaserequests;
-          this.addStatusName(this.purchaserequests);
-        //  console.log(purchaserequests);
-        });
-    }
-
-    addStatusName(purchs: PurchaseRequest[]) {
- //     console.log('addStatusName');
- //     console.log(purchs);
-      for (let purch of purchs) {
- //       console.log('purch.StatusId ' + purch.StatusId);
-        this.StatusSvc.get(purch.StatusId)
-          .subscribe(listStatus => {
- //           console.log(listStatus[0]);
-            purch.StatusName = listStatus[0].Description;
-          });
-      }
-    }
+          this.addUserName(purchaserequests);
+    });
 
   }
+
+  addUserName(reqs: PurchaseRequest[]) {
+    for (let pr of reqs ) {
+      this.UserSvc.get(pr.UserId)
+        .subscribe(users => {
+          pr.UserName = users[0].UserName;
+        });
+    }
+  }
+}

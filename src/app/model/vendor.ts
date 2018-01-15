@@ -1,5 +1,5 @@
 export class Vendor {
-  Id: string;
+  Id: number;
   Code: string;
   Name: string;
   Address: string;
@@ -11,7 +11,7 @@ export class Vendor {
   PreApproved: boolean;
   Active: boolean;
 
-  constructor (id: string,
+  constructor (id: number,
     code: string,
     name: string,
     address: string,

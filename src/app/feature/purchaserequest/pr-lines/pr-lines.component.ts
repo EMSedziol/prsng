@@ -24,6 +24,11 @@ export class PrLinesComponent implements OnInit {
   resp;
   prtotal = 0.0;
 
+  compareFn(v1: number, v2: number): boolean {
+    console.log('v1 ' + v1 + ' v2 ' + v2);
+    return v1 == v2;
+  }
+
   constructor(private PRSvc: PurchaseRequestService,
               private PRLISvc: PurchaseRequestLineItemService,
               private ProdSvc: ProductService,
@@ -56,7 +61,7 @@ export class PrLinesComponent implements OnInit {
     this.StatusSvc.get(purch.StatusId)
       .subscribe(status => {
   //      console.log('status ' + status[0].Description);
-        purch.StatusName = status[0].Description;
+      purch.StatusDesc = status[0].Description;
       });
   }
   addProduct(prli: PurchaseRequestLineItem[]) {
@@ -67,10 +72,10 @@ export class PrLinesComponent implements OnInit {
        .subscribe(products => {
            prline.ProductName = products[0].Name;
            prline.ProductPrice = products[0].Price;
-          prtotal = prtotal + (prline.ProductPrice * prline.Quantity);
-          console.log('prline.ProductPrice ' + prline.ProductPrice);
-          console.log('Quantity ' + prline.Quantity);
-          console.log('prline ' + prtotal);
+           prtotal = prtotal + (prline.ProductPrice * prline.Quantity);
+ //         console.log('prline.ProductPrice ' + prline.ProductPrice);
+ //         console.log('Quantity ' + prline.Quantity);
+ //         console.log('prline ' + prtotal);
          });
     }
   }

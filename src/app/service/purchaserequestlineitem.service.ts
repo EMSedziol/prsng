@@ -25,6 +25,8 @@ export class PurchaseRequestLineItemService {
   }
 
   create(purchaserequestlineitem: PurchaseRequestLineItem): Observable<any>  {
+    console.log('inside create');
+    console.log(purchaserequestlineitem);
     return this.http.post(url + 'Add', purchaserequestlineitem ) as Observable<any>;
   }
 

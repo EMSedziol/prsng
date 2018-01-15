@@ -14,7 +14,7 @@ export class ProductCreateComponent implements OnInit {
 
   title = 'Product Create';
   resp: any;
-   Product: Product = new Product('0', '', '', '', 0, '', '', true);
+   Product: Product = new Product(0, 0, '', '', 0, '', '', true);
    vendors: Vendor[];
 
    create() {

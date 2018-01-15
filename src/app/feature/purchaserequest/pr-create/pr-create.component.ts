@@ -12,8 +12,8 @@ export class PRCreateComponent implements OnInit {
 
   title = 'Create a new Purchase Request';
   resp: any;
-  purchaserequest: PurchaseRequest = new PurchaseRequest( '',
-  '', '', '', '', '', '', 0, '', '', true);
+  purchaserequest: PurchaseRequest = new PurchaseRequest( 0,
+  0, '', '', '', '', '', 0, '', '', true);
 
   create() {
     console.log(this.purchaserequest);

@@ -46,9 +46,6 @@ import { PrLinesComponent } from './feature/purchaserequest/pr-lines/pr-lines.co
 import { PrliCreateComponent } from './feature/purchaserequestlineitem/prli-create/prli-create.component';
 import { PrliDetailComponent } from './feature/purchaserequestlineitem/prli-detail/prli-detail.component';
 import { PrliEditComponent } from './feature/purchaserequestlineitem/prli-edit/prli-edit.component';
-import { PRLIListComponent } from './feature/purchaserequestlineitem/prli-list/prli-list.component';
-import { ListPrComponent } from './feature/purchaserequestlineitem/list-pr/list-pr.component';
-
 
 @NgModule({
   declarations: [
@@ -74,7 +71,6 @@ import { ListPrComponent } from './feature/purchaserequestlineitem/list-pr/list-
     PRDetailComponent,
     PREditComponent,
     PRListComponent,
-    PRLIListComponent,
     PrliDetailComponent,
     PrliCreateComponent,
     PrliEditComponent,

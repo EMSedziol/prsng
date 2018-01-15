@@ -1,6 +1,7 @@
 export class Product {
-  Id: string;
-  VendorId: string;
+  Id: number;
+  VendorId: number;
+  VendorName: string;
   PartNumber: string;
   Name: string;
   Price: number;
@@ -8,8 +9,8 @@ export class Product {
   Photopath: string;
   Active: boolean;
 
-  constructor (id: string,
-              vendorid: string,
+  constructor (id: number,
+              vendorid: number,
               partNumber: string,
               name: string,
               price: number,

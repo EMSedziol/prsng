@@ -1,19 +1,20 @@
 export class PurchaseRequest {
-  Id: string;
-  UserId: string;
+  Id: number;
+  UserId: number;
+  UserName: string;
   Description: string;
   Justification: string;
   DateNeeded: string;
   DeliveryMode: string;
   StatusId: string;
-  StatusName: string;
+  StatusDesc: string;
   Total: number;
   SubmittedDate: string;
   ReasonForRejection: string;
   Active: boolean;
 
-  constructor (id: string,
-              userid: string,
+  constructor (id: number,
+              userid: number,
               description: string,
               justification: string,
               dateneeded: string,

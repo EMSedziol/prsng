@@ -2,10 +2,10 @@ import { Product } from '../model/product';
 import { PurchaseRequest } from '../model/purchaserequest';
 
 export class PurchaseRequestLineItem {
-  Id: string;
-  PurchaseRequestId: string;
+  Id: number;
+  PurchaseRequestId: number;
   PurchaseRequest: PurchaseRequest;
-  ProductId: string;
+  ProductId: number;
   ProductName: string;
   ProductPrice: number;
   Quantity: number;
@@ -13,9 +13,9 @@ export class PurchaseRequestLineItem {
   PRTotal: number;
   Active: boolean;
 
-  constructor (id: string,
-              purchaserequestid: string,
-              productid: string,
+  constructor (id: number,
+              purchaserequestid: number,
+              productid: number,
               quantity: number,
               active: boolean) {
                 this.Id = id;

@@ -14,7 +14,7 @@ export class VendorCreateComponent implements OnInit {
 
   resp: any;
 
-  vendor: Vendor = new Vendor('0', '', '', '', '', '', '', '', '', false, true);
+  vendor: Vendor = new Vendor(0, '', '', '', '', '', '', '', '', false, true);
 
   create() {
     console.log(this.vendor);

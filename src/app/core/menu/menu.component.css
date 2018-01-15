@@ -29,3 +29,11 @@ a:hover{
     font-family: Courier New, Courier, monospace;
 
 }
+
+h1 {
+  text-align: center;
+  color: rgb(6, 6, 117);
+  background-color: yellow;
+  font-family: Courier New, Courier, monospace;
+  font-weight: bold;
+}

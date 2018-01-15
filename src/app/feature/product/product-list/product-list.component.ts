@@ -42,7 +42,7 @@ export class ProductListComponent implements OnInit {
          console.log('Getting Vendor Name for VendorId: ' + prod.VendorId);
          this.VendorSvc.get(prod.VendorId)
           .subscribe(vendor => {
-              prod.VendorId = vendor[0].Name;
+              prod.VendorName = vendor[0].Name;
               console.log('for ' + prod);
             });
       }
