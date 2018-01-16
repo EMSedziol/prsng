@@ -27,7 +27,7 @@
 <div>
   <table class="table table-sm" *ngIf='vendors'>
     <tr>
-      <td>Id</td>
+<!--      <td>Id</td>   -->
       <td>Code</td>
       <td>Name</td>
       <td>Address</td>
@@ -41,7 +41,7 @@
       <td>Action</td>
     </tr>
     <tr *ngFor="let vendor of vendors | sort:selectedSortKey:sortDesc">
-      <td>{{ vendor.Id}}</td>
+<!--      <td>{{ vendor.Id}}</td>   -->
       <td>{{ vendor.Code }}</td>
       <td>{{ vendor.Name }}</td>
       <td>{{ vendor.Address }}</td>

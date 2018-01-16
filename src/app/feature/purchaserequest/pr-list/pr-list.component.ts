@@ -35,6 +35,9 @@ export class PRListComponent implements OnInit {
         .subscribe(purchaserequests => {
           this.purchaserequests = purchaserequests;
           this.addUserName(purchaserequests);
+          console.log('before addUserName');
+          this.addStatusDesc(purchaserequests);
+
     });
 
   }
@@ -46,5 +49,16 @@ export class PRListComponent implements OnInit {
           pr.UserName = users[0].UserName;
         });
     }
+  }
+
+  addStatusDesc(purch: PurchaseRequest[]) {
+       for (let pr of purch ) {
+        this.StatusSvc.get(pr.StatusId)
+          .subscribe(status => {
+           console.log('status ' + status[0].Description);
+          pr.StatusDesc = status[0].Description;
+         });
+     }
+
   }
 }

@@ -29,9 +29,9 @@
 <div>
   <table class="table table-sm" *ngIf='users'>
     <tr>
-      <td>Id</td>
+<!--      <td>Id</td>  -->
       <td>User Name</td>
-      <td>Password</td>
+<!--      <td>Password</td>   -->
       <td>FirstName</td>
       <td>Last Name</td>
       <td>Phone</td>
@@ -40,9 +40,9 @@
       <td>Action</td>
     </tr>
     <tr *ngFor="let user of users | sort:selectedSortKey:sortDesc"  ng-class-odd="'striped'">
-      <td>{{ user.Id}}</td>
+<!--       <td>{{ user.Id}}</td>  -->
       <td>{{ user.UserName }}</td>
-      <td>**********</td>
+<!--      <td>**********</td>    -->
       <td>{{ user.FirstName }}</td>
       <td>{{ user.LastName }}</td>
       <td>{{ user.Phone }}</td>
