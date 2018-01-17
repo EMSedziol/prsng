@@ -24,6 +24,7 @@ export class PRListComponent implements OnInit {
   purchaserequests: PurchaseRequest[];
   statuss: Status[];
   user: User;
+  userId = 2;  // currently hard coded, needs to be changed when login is activated
 
   constructor(private PurchaseRequestSvc: PurchaseRequestService,
               private StatusSvc: StatusService,
@@ -31,7 +32,7 @@ export class PRListComponent implements OnInit {
 
   ngOnInit() {
 
-      this.PurchaseRequestSvc.list()
+      this.PurchaseRequestSvc.prlist(this.userId)
         .subscribe(purchaserequests => {
           this.purchaserequests = purchaserequests;
           this.addUserName(purchaserequests);
